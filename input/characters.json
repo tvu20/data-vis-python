@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Pierre",
+        "aliases": ["Pierre"]
+    },
+    {
+        "name": "Natasha",
+        "aliases": ["Natásha"]
+    },
+    {
+        "name": "Andrei",
+        "aliases": ["Andrew", "Bolkónski"]
+    },
+    {
+        "name": "Nikolai",
+        "aliases": ["Nicholas", "Rostóv"]
+    },
+    {
+        "name": "Sonya",
+        "aliases": ["Sónya"]
+    },
+    {
+        "name": "Helene",
+        "aliases": ["Hélène"]
+    },
+    {
+        "name": "Marya",
+        "aliases": ["Mary"]
+    },
+    {
+        "name": "Anatole",
+        "aliases": ["Anatole"]
+    },
+    {
+        "name": "Napoleon",
+        "aliases": ["Napoleon", "Bonaparte"]
+    }
+]
+
