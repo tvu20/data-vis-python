@@ -4,20 +4,35 @@ import json
 from bs4 import BeautifulSoup
 
 # general info
-
 general = {
     "title": "",
     "author": "",
-    "characters": {}
+    "wordcount": 0,
+    "characters": {},
+    "themes": [],
+    "places": []
 }
 
 # character file
-
 f = open("input/characters.json")
 characterData = json.load(f)
 f.close()
 for char in characterData:
     general["characters"][char["name"]] = 0
+
+# themes
+f = open("input/themes.json")
+themes = json.load(f)
+f.close()
+for t in themes:
+    general["themes"].append(t["name"])
+
+# places
+f = open("input/places.json")
+places = json.load(f)
+f.close()
+for p in places:
+    general["places"].append(p)
 
 # beautiful soup
 
@@ -51,22 +66,50 @@ for container in elements:
         curr = {
             'book': book,
             'chapter': chapter,
-            "characters": {}
+            'wordcount': 0,
+            "characters": {},
+            "themes": {},
+            "places": {}
         }
 
         # character data
         for char in characterData:
             curr["characters"][char["name"]] = 0
 
+        # themes
+        for t in themes:
+            curr["themes"][t["name"]] = 0
+
+        # places
+        for p in places:
+            curr["places"][p] = 0
+
         paragraphs = container.findAll("p")
         for p in paragraphs:
             text = p.text
+
+            # word count
+            curr["wordcount"] += len(re.findall(r'\w+', text))
+
+            # characters
             for char in characterData:
                 for a in char["aliases"]:
                     num = text.count(a)
                     curr["characters"][char["name"]] += num
                     general["characters"][char["name"]] += num
 
+            # themes
+            for t in themes:
+                for a in t["aliases"]:
+                    num = text.count(a)
+                    curr["themes"][t["name"]] += num
+
+            # themes
+            for p in places:
+                num = text.count(p)
+                curr["places"][p] += num
+
+        general["wordcount"] += curr["wordcount"]
         chapters.append(curr)
 
 with open('general-info.txt', 'w') as f:

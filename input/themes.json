@@ -1,0 +1,43 @@
+[
+    {
+        "name": "love",
+        "aliases": ["love", "loved"]
+    },
+    {
+        "name": "beauty",
+        "aliases": ["beauty", "beautiful"]
+    },
+    {
+        "name": "marriage",
+        "aliases": ["marry", "married", "marriage", "marrying"]
+    },
+    {
+        "name": "religion",
+        "aliases": ["religious", "religion", "pray", "prayer", "prayers", "God"]
+    },
+    {
+        "name": "religion",
+        "aliases": ["religious", "religion", "pray", "prayer", "prayers", "God"]
+    },
+    {
+        "name": "dream",
+        "aliases": ["dream", "dreamed", "dreaming", "dreams"]
+    },
+    {
+        "name": "war",
+        "aliases": ["war"]
+    },
+    {
+        "name": "peace",
+        "aliases": ["peace", "peaceful", "peacefully"]
+    },
+    {
+        "name": "death",
+        "aliases": ["die", "death", "dying", "dead", "grief"]
+    },
+    {
+        "name": "history",
+        "aliases": ["history", "historian", "historians"]
+    }
+]
+
