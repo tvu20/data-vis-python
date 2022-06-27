@@ -112,8 +112,18 @@ for container in elements:
         general["wordcount"] += curr["wordcount"]
         chapters.append(curr)
 
-with open('general-info.txt', 'w') as f:
-    print(general, file=f)
 
-with open('chapter-detail.txt', 'w') as f:
-    print(chapters, file=f)
+# writing out to json
+general_obj = json.dumps(general, indent=4)
+with open("output/general-info.json", "w") as outfile:
+    outfile.write(general_obj)
+
+detail_obj = json.dumps(chapters, indent=4)
+with open("output/chapter-detail.json", "w") as outfile:
+    outfile.write(detail_obj)
+
+# with open('general-info.txt', 'w') as f:
+#     print(general, file=f)
+
+# with open('chapter-detail.txt', 'w') as f:
+#     print(chapters, file=f)

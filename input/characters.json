@@ -1,38 +1,47 @@
 [
     {
         "name": "Pierre",
+        "title": "Pierre Bezukhov",
         "aliases": ["Pierre"]
     },
     {
         "name": "Natasha",
+        "title": "Natasha Rostova",
         "aliases": ["Natásha"]
     },
     {
         "name": "Andrei",
+        "title": "Prince Andrei Nikolayevich Bolkonsky",
         "aliases": ["Andrew", "Bolkónski"]
     },
     {
         "name": "Nikolai",
+        "title": "Nikolai Rostov",
         "aliases": ["Nicholas", "Rostóv"]
     },
     {
         "name": "Sonya",
+        "title": "Sonya",
         "aliases": ["Sónya"]
     },
     {
         "name": "Helene",
+        "title": "Helene Kuragina",
         "aliases": ["Hélène"]
     },
     {
         "name": "Marya",
+        "title": "Princess Marya Bolkonskaya",
         "aliases": ["Mary"]
     },
     {
         "name": "Anatole",
+        "title": "Anatole Kuragin",
         "aliases": ["Anatole"]
     },
     {
         "name": "Napoleon",
+        "title": "Napoleon Bonaparte",
         "aliases": ["Napoleon", "Bonaparte"]
     }
 ]
