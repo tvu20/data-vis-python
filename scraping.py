@@ -53,19 +53,30 @@ general["author"] = re.search('Author: (.+)', currDiv.text).group(1)
 chapters = []
 book = ''
 
+culmulative = 0
+
 for container in elements:
     title = container.find("h2").text
 
     if "BOOK" in title:
         num = re.search('BOOK (.+):', title)
         book = num.group(1)
+        continue
+
+    if "EPILOGUE" in title:
+        num = re.search('(.+):', title)
+        book = num.group(1).strip()
+        continue
 
     if "CHAPTER" in title:
         chapter = re.search('CHAPTER (.+)', title).group(1)
 
+        culmulative += 1
+
         curr = {
             'book': book,
             'chapter': chapter,
+            'total': culmulative,
             'wordcount': 0,
             "characters": {},
             "themes": {},
