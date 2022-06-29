@@ -1,6 +1,7 @@
 {
     "title": "War and Peace",
     "author": "Leo Tolstoy",
+    "sections": 17,
     "wordcount": 571777,
     "characters": {
         "Pierre": 1963,

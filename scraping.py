@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 general = {
     "title": "",
     "author": "",
+    "sections": 0,
     "wordcount": 0,
     "characters": {},
     "themes": [],
@@ -61,11 +62,13 @@ for container in elements:
     if "BOOK" in title:
         num = re.search('BOOK (.+):', title)
         book = num.group(1)
+        general["sections"] += 1
         continue
 
     if "EPILOGUE" in title:
         num = re.search('(.+):', title)
         book = num.group(1).strip()
+        general["sections"] += 1
         continue
 
     if "CHAPTER" in title:
